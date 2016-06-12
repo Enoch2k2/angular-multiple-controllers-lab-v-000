@@ -1,10 +1,10 @@
-function StaffController() {
-  var vm = this;
-  vm.name = 'name';
-  vm.email = 'name@email.com';
-  vm.phone = '555-555-4444';
+function StaffController(){
+  var staff = this;
+  staff.name = "Casey";
+  staff.email = "casey@email.com";
+  staff.phone = "555-555-5555";
 }
 
 angular
   .module('app')
-  .controller('StaffController', StaffController)
+  .controller('StaffController', StaffController);

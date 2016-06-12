@@ -1,31 +1,30 @@
 <!doctype html>
-<html>
+<html ng-app="app">
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Angular Application</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Angular Application</title>
 </head>
 <body>
 
-    <div ng-app="app">
-        <div ng-controller="ContactController as contact">
-          <p>Hello, {{ contact.name }}!</p>
-          <p>Phone: {{ contact.phone }}</p>
-          <p>Email: {{ contact.email }}</p><br>
-          <div ng-controller="StaffController as staff">
-            <p>Staff: {{ staff.name }}</p>
-            <p>Staff Phone: {{ staff.phone }}</p>
-            <p>Staff Email: {{ staff.email }}</p>
-          </div>
-          <button ng-click="contact.changeName()">ChangeName</button>
-        </div>
+  <div ng-controller="ContactController as contact">
+    <h1>Contact</h1>
+    <p>Name: {{contact.name}}</p>
+    <p>Email: {{contact.email}}</p>
+    <p>Phone: {{contact.phone}}</p>
+    <div ng-controller="StaffController as staff">
+      <h1>Staff</h1>
+      <p>Name: {{staff.name}}</p>
+      <p>Email: {{staff.email}}</p>
+      <p>Phone: {{staff.phone}}</p>
     </div>
+    <button ng-click="contact.changeName()">Change Name</button>
+  </div>
 
-    <script src="js/angular.js"></script>
-    <script src="js/app/app.js"></script>
-    <script src="js/app/controllers/ContactController.js"></script>
-    <script src="js/app/controllers/StaffController.js"></script>
-
+  <script src="js/angular.js"></script>
+  <script src="js/app/app.js"></script>
+  <script src="js/app/controllers/ContactController.js"></script>
+  <script src="js/app/controllers/StaffController.js"></script>
 </body>
 </html>

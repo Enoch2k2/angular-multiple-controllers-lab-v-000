@@ -1,14 +1,14 @@
 function ContactController() {
-  var vm = this;
-  vm.name = 'Enoch';
-  vm.email = 'enoch@email.com';
-  vm.phone = '555-555-5555'
+  var contact = this;
+  contact.name = "Enoch";
+  contact.email = "enoch2k2@email.com";
+  contact.phone = "555-555-5555";
 
-  this.changeName = function() {
-    vm.name = 'Something else!'
-  }
+  contact.changeName = function() {
+    contact.name = 'Something else!'
+  };
 }
 
 angular
   .module('app')
-  .controller('ContactController', ContactController)
+  .controller('ContactController', ContactController);
